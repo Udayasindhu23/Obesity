@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obesity Prediction</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Obesity Prediction</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="number" step="any" name="height" placeholder="Height (in feet)" required>
+            <input type="number" step="any" name="weight" placeholder="Weight (in kg)" required>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
